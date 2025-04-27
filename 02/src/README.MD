@@ -42,18 +42,18 @@
  ## Ответ
     preemptible = true и core_fraction=5 помогут для экономии затрат на мощности
 
-    
+
 В качестве решения приложите:
 
 - скриншот ЛК Yandex Cloud с созданной ВМ, где видно внешний ip-адрес;
 
     ## Ответ
-        ![img1](https://github.com/alibok86/ter-homeworks/blob/main/02/src/2.png)
+![img1](https://github.com/alibok86/ter-homeworks/blob/main/02/src/2.png)
 
 - скриншот консоли, curl должен отобразить тот же внешний ip-адрес;
 
     ## Ответ
-        ![img1](https://github.com/alibok86/ter-homeworks/blob/main/02/src/1.png)
+![img1](https://github.com/alibok86/ter-homeworks/blob/main/02/src/1.png)
 
 - ответы на вопросы.
 
@@ -78,6 +78,9 @@
 2. Примените изменения.
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
+
+## Ответ
+![img1](https://github.com/alibok86/ter-homeworks/blob/main/02/src/3.png)
 
 
 ### Задание 5

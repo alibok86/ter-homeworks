@@ -33,6 +33,27 @@ variable "vpc_name" {
   description = "VPC network & subnet name"
 }
 
+variable "vpc_name_db" {
+  type        = string
+  default     = "develop2"
+  description = "VPC network & subnet name"
+}
+
+variable "vms_resources" {
+  type = map(object({
+    cores = number
+    memory  = number
+    core_fraction = number
+  }))
+}
+variable "metadata" {
+  type = object({
+    serial-port-enable = number
+    ssh-keys           = string
+  })
+  description = "Общие метаданные для всех виртуальных машин"
+  }
+
 ###ssh vars
 
 #variable "vms_ssh_root_key" {
