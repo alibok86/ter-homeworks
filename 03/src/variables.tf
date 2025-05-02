@@ -64,13 +64,14 @@ variable "vms_resources" {
 }
 
 variable "metadata" {
-  description = "Metadata for the resource"
-  type        = object({
+  type = map(object({
     serial-port-enable = number
-    ssh-keys           = string
-  })
+    ssh-keys  = string
+  }))
 }
 
 variable "each_vm" {
   type = map(object({  vm_name=string, cpu=number, ram=number, disk_volume=number, core_fraction=number }))
 }
+
+#each["vm_name"]

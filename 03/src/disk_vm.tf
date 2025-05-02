@@ -1,6 +1,6 @@
 resource "yandex_compute_disk" "volume" {
   count    = 3
-  name     = "volume-${count.index}"
+  name     = "volume-${count.index + 1}"
   size     = var.disk_size
 }
 
@@ -35,7 +35,7 @@ resource "yandex_compute_disk" "volume" {
   }
 
   metadata = {
-    serial-port-enable = var.metadata.serial-port-enable
+    serial-port-enable = var.metadata["ssh"].serial-port-enable
     ssh-keys           = local.ssh
   }
 }

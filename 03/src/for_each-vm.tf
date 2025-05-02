@@ -1,5 +1,6 @@
+
 resource "yandex_compute_instance" "db" {
-  for_each    = var.each_vm  
+  for_each    = var.each_vm
   name        = each.value["vm_name"]
   hostname    = "${each.value["vm_name"]}.netology.ru"
   platform_id = var.platform_id
@@ -23,7 +24,7 @@ resource "yandex_compute_instance" "db" {
   }
 
   metadata = {
-    serial-port-enable = var.metadata.serial-port-enable
-    ssh-keys           = var.metadata.ssh-keys
+    serial-port-enable = var.metadata["ssh"].serial-port-enable
+    ssh-keys           = local.ssh
   }
 }
